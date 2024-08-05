@@ -14,7 +14,7 @@ app.add_middleware(
   allow_headers=["*"],
 )
 # تحميل النموذج المدرب
-model = load_model("student_performance_api")
+model = load_model("student_performance_best_model")
 @app.get("/predict")
 async def predict(
     Age: int = Query(..., description="عمر الطالب (من 15 إلى 18 سنة)"),
